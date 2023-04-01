@@ -80,12 +80,13 @@ router.post('/home',(req,res,next)=>{
         subject: "Registration Confirmation",
         text: `Dear ${form_name},
 
-Thank you for registering for our workshop! It's a pleasure to have you onboard. Having enthusiasm for learning concepts is the first step to success, and I hope we can achieve that together.
-
+Thank you for registering for our workshop! It's a pleasure to have you onboard. Having the enthusiasm to learn concepts is the first step to success, and hope that we can achieve it together.
+Make sure to join the WhatsApp group (link provided below).
+https://chat.whatsapp.com/Bid5HPVbrhY8KHurV0P37M
 Thanks and regards,
 
 Sidharth Ganesh
-Chairman, CSI SB SJCETPALAI`,
+Chairman, CSI SB SJCET PALAI`,
       };
       
       // Send email
