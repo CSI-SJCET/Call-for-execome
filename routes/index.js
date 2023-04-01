@@ -63,9 +63,7 @@ router.post('/home',(req,res,next)=>{
       
         }else{
      // console.log(result[0])
-       console.log('inserted')
-       var msg3='successfully registered';
-       res.render('success',{msg3})
+       
 
        const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -77,10 +75,17 @@ router.post('/home',(req,res,next)=>{
       
       // Create email message
       const message = {
-        from: 'yourgmailaccount@gmail.com',
+        from: "csi@sjcetpalai.ac.in",
         to: form_email,
-        subject: 'Registration Confirmation',
-        text: 'Hello, Thank you for registering on our website!'
+        subject: "Registration Confirmation",
+        text: `Dear ${form_name},
+
+Thank you for registering for our workshop! It's a pleasure to have you onboard. Having enthusiasm for learning concepts is the first step to success, and I hope we can achieve that together.
+
+Thanks and regards,
+
+Sidharth Ganesh
+Chairman, CSI SB SJCETPALAI`,
       };
       
       // Send email
@@ -89,6 +94,9 @@ router.post('/home',(req,res,next)=>{
           console.log(err);
         } else {
           console.log('Email sent: ' + info.response);
+          console.log('inserted')
+       var msg3='successfully registered';
+       res.render('success',{msg3})
         }
       });
       
